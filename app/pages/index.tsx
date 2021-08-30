@@ -53,7 +53,16 @@ import logo from "public/logo.png"
 const Home: BlitzPage = () => {
   return (
     <div>
-      <main>
+      <main className="bg-white dark:bg-gray-900 h-screen">
+        {/* <div className="max-w-7xl  mx-auto px-4 sm:px-6">
+          <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 h-auto">Repairing knowledge distribution</h1>
+          <button className="bg-purple-500 text-white p-4 rounded m-4">
+            View our projects
+          </button>
+          <button className="bg-indigo-500 text-white p-4 rounded m-4">
+            Who we are
+          </button>
+        </div> */}
         {/* <div className="buttons" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
           <Suspense fallback="Loading...">
             <UserInfo />

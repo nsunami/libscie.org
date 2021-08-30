@@ -2,9 +2,13 @@
 module.exports = {
   mode: "jit",
   purge: ["{pages,app}/**/*.{js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        "3xl": "0 35px 35px rgba(87, 76, 250, 0.25)",
+      },
+    },
   },
   variants: {
     extend: {},
