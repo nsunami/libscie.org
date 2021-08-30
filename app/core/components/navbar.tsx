@@ -5,6 +5,24 @@ import { ChartBarIcon, PhoneIcon, PlayIcon, SupportIcon } from "@heroicons/react
 import { Link, Routes } from "blitz"
 import { ChevronDown24, Menu32, Close24 } from "@carbon/icons-react"
 
+const singleLinks = [
+  {
+    name: "Community",
+    href: "#",
+  },
+  {
+    name: "Projects",
+    href: "#",
+  },
+  {
+    name: "Infrastructure",
+    href: "#",
+  },
+  {
+    name: "Who we are",
+    href: "#",
+  },
+]
 const features = [
   {
     name: "Analytics",
@@ -104,6 +122,15 @@ export default function Navbar() {
                             </span>
                           </a>
                         ))}
+                        {singleLinks.map((link) => (
+                          <a
+                            key={link.name}
+                            href={link.href}
+                            className="text-base font-medium text-gray-900 dark:text-white"
+                          >
+                            {link.name}
+                          </a>
+                        ))}
                       </nav>
                     </div>
                   </div>
@@ -200,8 +227,16 @@ export default function Navbar() {
                   </>
                 )}
               </Popover>
+              {singleLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-base font-medium text-gray-300 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
+                >
+                  {link.name}
+                </a>
+              ))}
               {/* Popover 2 */}
-
               <Popover className="relative">
                 {({ open }) => (
                   <>
