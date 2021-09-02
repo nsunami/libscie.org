@@ -11,10 +11,6 @@ const singleLinks = [
     href: "#",
   },
   {
-    name: "Projects",
-    href: "#",
-  },
-  {
     name: "Infrastructure",
     href: "#",
   },
@@ -25,9 +21,21 @@ const singleLinks = [
 ]
 const features = [
   {
-    name: "Analytics",
+    name: "Hypergraph",
     href: "#",
-    description: "Get a better understanding of where your traffic is coming from.",
+    description: "Publish research modules",
+    icon: ChartBarIcon,
+  },
+  {
+    name: "Open Update",
+    href: "#",
+    description: "Weekly open science news podcast",
+    icon: ChartBarIcon,
+  },
+  {
+    name: "Consulting",
+    href: "#",
+    description: "We support your work with our expertise",
     icon: ChartBarIcon,
   },
 ]
@@ -51,7 +59,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <div className="w-full sticky bg-gray-50 dark:bg-gray-900 top-0 text-base">
+    <div className="w-full sticky bg-gray-50 dark:bg-gray-900 top-0 text-base z-50">
       <Popover className="relative bg-gray-50 dark:bg-gray-900 shadow-3xl w-full">
         <div className="mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
@@ -70,7 +78,7 @@ export default function Navbar() {
             {/* START MOBILE */}
             {/* Hamburger menu */}
             <div className="-mr-2 -my-2 md:hidden">
-              <Popover.Button className="bg-gray-50 dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <Popover.Button className="bg-gray-50 dark:bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                 <span className="sr-only">Open menu</span>
                 <Menu32 className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
@@ -99,7 +107,7 @@ export default function Navbar() {
                         />
                       </div>
                       <div className="-mr-2">
-                        <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-300 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                           <span className="sr-only">Close menu</span>
                           <Close24 className="h-6 w-6" aria-hidden="true" />
                         </Popover.Button>
@@ -160,18 +168,18 @@ export default function Navbar() {
                     <Popover.Button
                       className={classNames(
                         open
-                          ? "text-gray-500 dark:text-gray-300"
-                          : "text-gray-300 dark:text-gray-500",
-                        "group bg-gray-50 dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2  focus:ring-indigo-500"
+                          ? "text-gray-700 dark:text-gray-300"
+                          : "text-gray-500 dark:text-gray-500",
+                        "group bg-gray-50 dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:ring-2  focus:ring-indigo-500"
                       )}
                     >
-                      <span>Solutions</span>
+                      <span>Projects</span>
                       <ChevronDown24
                         className={classNames(
                           open
-                            ? "text-gray-500 dark:text-gray-300"
-                            : "text-gray-300 dark:text-gray-500",
-                          "ml-2 h-5 w-5 group-hover:text-gray-500 dark:group-hover:text-gray-300"
+                            ? "text-gray-700 dark:text-gray-300"
+                            : "text-gray-600 dark:text-gray-500",
+                          "ml-2 h-5 w-5 group-hover:text-gray-700 dark:group-hover:text-gray-300"
                         )}
                         aria-hidden="true"
                       />
@@ -231,7 +239,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-base font-medium text-gray-300 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
+                  className="text-base font-medium text-gray-500 dark:text-gray-700 hover:text-gray-900 dark:hover:text-gray-300"
                 >
                   {link.name}
                 </a>
@@ -243,18 +251,18 @@ export default function Navbar() {
                     <Popover.Button
                       className={classNames(
                         open
-                          ? "text-gray-500 dark:text-gray-300"
-                          : "text-gray-300 dark:text-gray-500",
-                        "group bg-gray-50 dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2  focus:ring-indigo-500"
+                          ? "text-gray-700 dark:text-gray-300"
+                          : "text-gray-500 dark:text-gray-500",
+                        "group bg-gray-50 dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:ring-2  focus:ring-indigo-500"
                       )}
                     >
                       <span>More</span>
                       <ChevronDown24
                         className={classNames(
                           open
-                            ? "text-gray-500 dark:text-gray-300"
-                            : "text-gray-300 dark:text-gray-500",
-                          "ml-2 h-5 w-5 group-hover:text-gray-500 dark:group-hover:text-gray-300"
+                            ? "text-gray-700 dark:text-gray-300"
+                            : "text-gray-500 dark:text-gray-500",
+                          "ml-2 h-5 w-5 group-hover:text-gray-700 dark:group-hover:text-gray-300"
                         )}
                         aria-hidden="true"
                       />
