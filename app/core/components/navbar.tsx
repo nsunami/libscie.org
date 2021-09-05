@@ -4,6 +4,7 @@ import { Popover, Transition } from "@headlessui/react"
 import { ChartBarIcon, PhoneIcon, PlayIcon, SupportIcon } from "@heroicons/react/outline"
 import { Link, Routes } from "blitz"
 import { ChevronDown24, Menu32, Close24 } from "@carbon/icons-react"
+import LibscieLogo from "./Libscie-logo"
 
 const singleLinks = [
   {
@@ -63,15 +64,11 @@ export default function Navbar() {
       <Popover className="relative bg-gray-50 dark:bg-gray-900 shadow-3xl w-full">
         <div className="mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
+            <div className="flex justify-start lg:w-0 lg:flex-1 w-10 h-auto inline-block">
               <Link href={Routes.Home()}>
                 <a>
                   <span className="sr-only">Liberate Science</span>
-                  <img
-                    className="h-10 w-auto"
-                    src="https://ucarecdn.com/fdb1d591-39eb-419b-b9f0-6ec678376738/libscielogomark256.png"
-                    alt="Liberate Science logo"
-                  />
+                  <LibscieLogo />
                 </a>
               </Link>
             </div>
@@ -100,11 +97,7 @@ export default function Navbar() {
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <img
-                          className="h-8 w-auto"
-                          src="https://ucarecdn.com/fdb1d591-39eb-419b-b9f0-6ec678376738/libscielogomark256.png"
-                          alt="Workflow"
-                        />
+                        <LibscieLogo />
                       </div>
                       <div className="-mr-2">
                         <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -239,7 +232,7 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-base font-medium text-gray-500 dark:text-gray-700 hover:text-gray-900 dark:hover:text-gray-300"
+                  className="text-base font-medium text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
                 >
                   {link.name}
                 </a>

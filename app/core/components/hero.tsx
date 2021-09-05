@@ -10,7 +10,7 @@ export default function Hero() {
       <p className="max-w-xl text-black dark:text-white mb-5 font-bold">
         Liberate science supports your efforts to improve research, bringing a decade of open
         science activism, research experience, and technological know-how to your projects. All
-        while we work towards our grand vision.
+        while we work towards our own grand vision.
       </p>
       <Link href="https://savvycal.com/libscie-chartgerink/chat">
         <a className="rounded bg-indigo-600 text-white text-xl p-2 hover:bg-indigo-500 shadow-3xl">

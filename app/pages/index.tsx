@@ -3,12 +3,13 @@ import { Image, Link, BlitzPage, useMutation, Routes } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
-import logo from "public/logo.png"
 import Project from "../core/components/Project"
 import Hero from "../core/components/hero"
 import HeroBackground from "../core/components/HeroBackground"
 import Testimonial from "../core/components/Testimonial"
 import Hrule from "../core/components/Hrule"
+import CtaContentWidth from "../core/components/Cta-content-width"
+import Waves from "../core/components/Waves"
 
 // const UserInfo = () => {
 //   const currentUser = useCurrentUser()
@@ -53,14 +54,17 @@ import Hrule from "../core/components/Hrule"
 const Home: BlitzPage = () => {
   return (
     <div>
-      <main className="bg-white dark:bg-gray-900 pb-20">
-        <Hero />
+      <main className="bg-white dark:bg-gray-900 pb-20 pt-28">
+        <div className="bg-hero-pattern-black dark:bg-hero-pattern-white bg-cover pb-9">
+          <Hero />
+        </div>
         {/* <div className="buttons" style={{ marginTop: "1rem", marginBottom: "1rem" }}>
             <Suspense fallback="Loading...">
-              <UserInfo />
+            <UserInfo />
             </Suspense>
           </div> */}
-        <div className="max-w-4xl mx-auto">
+        {/* <Waves /> */}
+        <div className="max-w-4xl mx-auto mt-28">
           <Project
             title="Hypergraph"
             description="Hypergraph is our first tool, which is an easy to use version tracker like Zenodo except it writes your content to the peer-to-peer commons instead of the CERN institute or Elsevier Digital Commons. Therefore the fate of your data is not linked to the fate of the institute where you store it."
@@ -81,6 +85,12 @@ const Home: BlitzPage = () => {
             img="https://www.psychologie.uzh.ch/psychologie/dam/jcr:ffffffff-cc56-3101-ffff-ffffe6847272/martin_goetz.jpg"
           />
           <Project title="Podcast" />
+          <CtaContentWidth
+            call="TELL US YOUR CHALLENGE. WE LOVE COFFEE, SO DROP US A LINE AND MEET!"
+            description="Not sure yet? Sign up to our newsletter"
+            link="https://savvycal.com/libscie-chartgerink/chat"
+            button="Chat with us"
+          />
         </div>
       </main>
     </div>

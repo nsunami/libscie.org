@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "blitz"
+import { Link, Routes } from "blitz"
 import { LogoTwitter32, LogoGithub32, LogoLinkedin32 } from "@carbon/icons-react"
 import Mozilla from "./Mozilla"
 import Shuttleworth from "./Shuttleworth"
@@ -7,9 +7,9 @@ import PublicDomain from "./PublicDomain"
 
 export default function Footer() {
   return (
-    <div className="w-full bg-white dark:bg-gray-900">
+    <div className="w-full bg-white dark:bg-gray-900 sm:p-0 p-4">
       <div className="sm:flex sm:max-w-4xl mx-auto text-black dark:text-white bg-white dark:bg-gray-900">
-        <div className="w-10/12 sm:w-full m-4 mt-0 text-sm">
+        <div className="w-10/12 sm:w-full mb-0 sm:mb-28 mt-0 text-sm">
           <h3 className="font-bold text-base">liberate science</h3>
           <p className="flex align-middle">
             2021
@@ -33,12 +33,12 @@ export default function Footer() {
             </Link>
           </p>
           <p>
-            <Link href="#">
+            <Link href={Routes.Imprint()}>
               <a className="hover:bg-indigo-600 hover:text-white">Imprint</a>
             </Link>
           </p>
         </div>
-        <div className="w-10/12 sm:w-full ml-4">
+        <div className="w-10/12 sm:w-full mt-4 sm:mt-0">
           <h3 className="mb-4 font-bold text-sm">Funders</h3>
           <p className="mt-4 mb-4">
             <Link href="https://shuttleworthfoundation.org">
@@ -55,16 +55,18 @@ export default function Footer() {
             </Link>
           </p>
         </div>
-        <div className="w-10/12 sm:w-full text-sm  ml-4 mt-4 sm:mt-0">
+        <div className="w-10/12 sm:w-full text-sm">
           {/* <h3 className="mb-4 font-bold">Navigation</h3> */}
         </div>
-        <div className="w-10/12 sm:w-full text-sm  ml-4 mt-4 sm:mt-0">
+        <div className="w-10/12 sm:w-full text-sm  mt-4 sm:mt-0">
           <h3 className="mb-4 font-bold text-sm">Follow</h3>
           <p>
             <Link href="https://github.com/libscie">
               <a className="flex align-middle">
                 <LogoGithub32 className="max-h-4 w-auto m-1" />
-                <span className="hover:bg-indigo-600 text-white">GitHub</span>
+                <span className="hover:bg-indigo-600 text-black dark:text-white hover:text-white">
+                  GitHub
+                </span>
               </a>
             </Link>
           </p>
@@ -72,7 +74,9 @@ export default function Footer() {
             <Link href="https://www.linkedin.com/company/libscie">
               <a className="flex align-middle">
                 <LogoLinkedin32 className="max-h-4 w-auto m-1" />
-                <span className="hover:bg-indigo-600 text-white">LinkedIn</span>
+                <span className="hover:bg-indigo-600 text-black dark:text-white hover:text-white">
+                  LinkedIn
+                </span>
               </a>
             </Link>
           </p>
@@ -81,7 +85,9 @@ export default function Footer() {
             <Link href="https://twitter.com/libscie">
               <a className="flex align-middle">
                 <LogoTwitter32 className="max-h-4 w-auto m-1" />
-                <span className="hover:bg-indigo-600 text-white">Twitter</span>
+                <span className="hover:bg-indigo-600 text-black dark:text-white hover:text-white">
+                  Twitter
+                </span>
               </a>
             </Link>
           </p>
