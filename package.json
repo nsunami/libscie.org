@@ -32,6 +32,7 @@
     "autoprefixer": "10.3.3",
     "blitz": "0.39.0",
     "formik": "2.2.9",
+    "new-github-issue-url": "0.2.1",
     "postcss": "8.3.6",
     "react": "alpha",
     "react-dom": "alpha",

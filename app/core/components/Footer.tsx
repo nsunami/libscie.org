@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, Routes } from "blitz"
 import { LogoTwitter32, LogoGithub32, LogoLinkedin32 } from "@carbon/icons-react"
+import newGithubIssueUrl from "new-github-issue-url"
+
 import Mozilla from "./Mozilla"
 import Shuttleworth from "./Shuttleworth"
 import PublicDomain from "./PublicDomain"
@@ -28,7 +30,14 @@ export default function Footer() {
             </Link>
           </p>
           <p>
-            <Link href="#">
+            <Link
+              href={newGithubIssueUrl({
+                user: "libscie",
+                repo: "libscie.org",
+                title: "Found issue with website",
+                body: "While browsing your website, I found the following issue:\n\n",
+              })}
+            >
               <a className="hover:bg-indigo-600 hover:text-white">Report issue</a>
             </Link>
           </p>
