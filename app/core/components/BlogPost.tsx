@@ -1,5 +1,5 @@
 import React from "react"
-import { useQuery } from "blitz"
+import { useQuery, Link } from "blitz"
 
 import getBlogPost from "../queries/getBlogPost"
 import PageHeader from "./Page-header"
@@ -16,8 +16,23 @@ const BlogPost = (slug) => {
           title={post.title}
           description={post.custom_excerpt}
         />
+        <div className="flex">
+          {post.authors.map((author) => (
+            <div key="author" className="flex mr-4 ml-4 md:ml-0 my-2">
+              <img className="h-8 w-8 rounded-full" src={author.profile_image} />
+              <a
+                href={author.website}
+                className="mx-2 self-center"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <h2 className="mx-2 self-center">{author.name}</h2>
+              </a>
+            </div>
+          ))}
+        </div>
         <article
-          className="content mb-20 sm:mx-0 mx-4 text-justify blog-post"
+          className="content mb-20 max-w-2xl md:mx-0 mx-4 text-justify blog-post"
           dangerouslySetInnerHTML={{ __html: post.html }}
         ></article>
       </div>

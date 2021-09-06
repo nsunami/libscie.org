@@ -1,9 +1,10 @@
 import React from "react"
-import { useQuery } from "@blitzjs/core"
+import { useQuery, Routes } from "@blitzjs/core"
 import getLatestBlogPosts from "../queries/getLatestBlogPosts"
 
 const BlogReel = () => {
   const [postsNew] = useQuery(getLatestBlogPosts, null)
+  console.log(postsNew)
 
   return (
     <div className="relative bg-white dark:bg-gray-900 px-4 sm:px-0 text-black dark:text-white pb-20">
@@ -23,7 +24,7 @@ const BlogReel = () => {
                       {post.primary_tag.name}
                     </a>
                   </p>
-                  <a href={post.url} className="block mt-2">
+                  <a href={`blog/${post.slug}`} className="block mt-2">
                     <p className="text-xl font-semibold hover:underline">{post.title}</p>
                   </a>
                 </div>

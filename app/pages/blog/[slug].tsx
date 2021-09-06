@@ -1,6 +1,5 @@
-import { BlitzPage, useParam, useQuery } from "blitz"
+import { BlitzPage, useParam } from "blitz"
 import Layout from "app/core/layouts/Layout"
-import getBlogPost from "../../core/queries/getBlogPost"
 import { Suspense } from "react"
 import BlogPost from "../../core/components/BlogPost"
 

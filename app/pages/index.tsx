@@ -70,27 +70,30 @@ const Home: BlitzPage = () => {
             <BlogReel />
           </Suspense>
           <Project
-            title="Hypergraph"
-            description="Hypergraph is our first tool, which is an easy to use version tracker like Zenodo except it writes your content to the peer-to-peer commons instead of the CERN institute or Elsevier Digital Commons. Therefore the fate of your data is not linked to the fate of the institute where you store it."
-          />
-          <Project
-            title="Tailormade services and consultancy on Open Science Practice."
-            description="We love to help you to make science more open. With our experienced team we often co-write grants, build websites for research groups."
-          />
-          <Project
-            title="Keynotes"
-            description="We often share our knowledge and experiences on open science. For instance for the OASPA conference, the Open Science Community Tilburg group and the Gieskes-Strijbis Fund. Do you want to know where we are next month, or book us for a keynote or talk?"
+            title="Research modules"
+            description="Based on years of peer-reviewed research, our vision for improved science is where we publish research outputs step by step, instead of after-the-fact. This way, we track where findings come from and can "
           />
           <Testimonial
             quote="The vision for research modules left faculty and students in awe! The enthusiasm shows to this day - this is the way forward and everybody should hear about it."
             author="Dr. Martin Götz"
             role="Assistant Professor"
             org="University of Zurich"
-            img="https://www.psychologie.uzh.ch/psychologie/dam/jcr:ffffffff-cc56-3101-ffff-ffffe6847272/martin_goetz.jpg"
+            img="https://ucarecdn.com/b6620380-4af7-4dab-b237-c9db181cc0ca/-/preview/-/quality/smart/"
           />
-          <Project title="Podcast" />
+          <Project
+            title="Tailormade services and consultancy"
+            description="We want to help you make your science more open. Our experienced team can help you with tasks ranging from grant-writing, website building, to forensic statistics."
+          />
+          <Project
+            title="Keynotes"
+            description="Open Science begins with shared knowledge. We welcome invitations to speak on the various facets of building open science, from introductions for beginners to advanced topics. Click below to find out where we are next month or to book us for an event."
+          />
+          <Project
+            title="Podcast"
+            description="Your Open Science Digest. Visit us below for teh latest news from the web, social media, and newsfeeds."
+          />
           <CtaContentWidth
-            call="TELL US YOUR CHALLENGE. WE LOVE COFFEE, SO DROP US A LINE AND MEET!"
+            call="TELL US YOUR CHALLENGE. WE LOVE COFFEE, SO DROP US A LINE!"
             description="Not sure yet? Sign up to our newsletter"
             link="https://savvycal.com/libscie-chartgerink/chat"
             button="Chat with us"
