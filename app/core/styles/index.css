@@ -11,16 +11,48 @@
 }
 .blog-post a:hover {
   background-color: var(--primary-color);
+  color: #ffffff;
 }
 
 .blog-post h2 {
   font-size: x-large;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .blog-post h3 {
   font-size: large;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
+.blog-post p {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-post figcaption {
+  font-size: small;
+}
+
+.blog-post img {
+  max-height: 400px;
+  margin: auto;
+}
+
+.blog-post hr {
+  border: 1px solid grey;
+  margin: 2rem 0 2rem 0;
+}
+
+.blog-post blockquote {
+  border-left: 2px solid var(--primary-color);
+  padding: 1rem;
+  margin: 2rem;
+  font-style: italic;
+}
 .blog-post ul {
   list-style-type: circle;
 }
