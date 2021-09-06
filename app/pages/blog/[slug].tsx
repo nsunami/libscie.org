@@ -10,7 +10,7 @@ const BlogPostPage: BlitzPage = () => {
   // get post
 
   return (
-    <div className="flex justify-center items-center mt-8">
+    <div className="flex justify-center items-center">
       <Suspense fallback="Loading...">
         <BlogPost slug={slug} />
       </Suspense>

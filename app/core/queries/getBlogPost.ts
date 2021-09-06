@@ -7,7 +7,7 @@ const api = new GhostContentAPI({
 })
 
 export default async function getBlogPost(slug) {
-  const blogPost = await api.posts.read(slug.slug)
+  const blogPost = await api.posts.read(slug.slug, { include: "tags,authors" })
 
   return blogPost
 }

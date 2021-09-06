@@ -5,3 +5,22 @@
 :root {
   --primary-color: #574cfa;
 }
+
+.blog-post a {
+  border-bottom: 2px solid var(--primary-color);
+}
+.blog-post a:hover {
+  background-color: var(--primary-color);
+}
+
+.blog-post h2 {
+  font-size: x-large;
+}
+
+.blog-post h3 {
+  font-size: large;
+}
+
+.blog-post ul {
+  list-style-type: circle;
+}
