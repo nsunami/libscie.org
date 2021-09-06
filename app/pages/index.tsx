@@ -66,7 +66,9 @@ const Home: BlitzPage = () => {
           </div> */}
         {/* <Waves /> */}
         <div className="max-w-4xl mx-auto mt-28">
-          <BlogReel />
+          <Suspense fallback="Loading">
+            <BlogReel />
+          </Suspense>
           <Project
             title="Hypergraph"
             description="Hypergraph is our first tool, which is an easy to use version tracker like Zenodo except it writes your content to the peer-to-peer commons instead of the CERN institute or Elsevier Digital Commons. Therefore the fate of your data is not linked to the fate of the institute where you store it."
