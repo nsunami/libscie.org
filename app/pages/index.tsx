@@ -11,11 +11,9 @@ import { Play32, Pause32 } from "@carbon/icons-react"
 
 import Project from "../core/components/Project"
 import Hero from "../core/components/hero"
-import HeroBackground from "../core/components/HeroBackground"
 import Testimonial from "../core/components/Testimonial"
 import Hrule from "../core/components/Hrule"
 import CtaContentWidth from "../core/components/Cta-content-width"
-import Waves from "../core/components/Waves"
 import BlogReel from "../core/components/Blog-reel"
 
 // const UserInfo = () => {
@@ -90,6 +88,8 @@ const Home: BlitzPage = () => {
             title="Research modules"
             description="While we help you, we nurture our vision for an improved science where we publish research outputs step by step, instead of after-the-fact. This way, we conveniently track where findings come from and expand the record to include things beyond narratives."
             icon={<Networking_06 className="w-40 h-40 mx-auto" />}
+            button1="Watch the introduction video"
+            url1="https://www.youtube.com/watch?v=wdgPnsiifQU"
           />
           <Testimonial
             quote="The vision for research modules left faculty and students in awe! The enthusiasm shows to this day - this is the way forward and everybody should hear about it."
@@ -139,7 +139,7 @@ const Home: BlitzPage = () => {
             }
             button1="Subscribe"
             url1="https://anchor.fm/open-update"
-          ></Project>
+          />
           <CtaContentWidth
             call="Invite us to a chat and share your current challenges?"
             description="We're happy to meet and see whether we can help point you in the right direction."

@@ -2,7 +2,7 @@ import React from "react"
 import { ChevronDown24 } from "@carbon/icons-react"
 import { Link } from "blitz"
 
-export default function Project({ title, description, icon, button1, url1, children }) {
+export default function Project({ title, description, icon, button1, url1 }) {
   return (
     <div className="sm:flex mt-8 mb-8 dark:text-white">
       <div className="sm:w-52">
@@ -12,7 +12,6 @@ export default function Project({ title, description, icon, button1, url1, child
       <div className="w-full pl-8">
         <h2 className="text-2xl mb-6">{title}</h2>
         <p className="text-base mb-6">{description}</p>
-        {children}
         {button1 ? (
           <Link href={url1}>
             <a

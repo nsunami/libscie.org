@@ -233,7 +233,7 @@ export default function Navbar() {
                               </a>
                             ))}
                           </div>
-                          {callsToAction ? (
+                          {/* {callsToAction ? (
                             <div className="px-5 py-5  bg-indigo-600 text-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                               {callsToAction.map((item) => (
                                 <div key={item.name} className="flow-root">
@@ -252,7 +252,7 @@ export default function Navbar() {
                             </div>
                           ) : (
                             ""
-                          )}
+                          )} */}
                         </div>
                       </Popover.Panel>
                     </Transition>
@@ -313,7 +313,7 @@ export default function Navbar() {
                               </a>
                             ))}
                           </div>
-                          {callsToAction ? (
+                          {/* {callsToAction ? (
                             <div className="px-5 py-5  bg-indigo-600 text-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
                               {callsToAction.map((item) => (
                                 <div key={item.name} className="flow-root">
@@ -332,7 +332,7 @@ export default function Navbar() {
                             </div>
                           ) : (
                             ""
-                          )}
+                          )} */}
                         </div>
                       </Popover.Panel>
                     </Transition>

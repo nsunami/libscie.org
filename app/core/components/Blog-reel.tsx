@@ -4,7 +4,6 @@ import getLatestBlogPosts from "../queries/getLatestBlogPosts"
 
 const BlogReel = () => {
   const [postsNew] = useQuery(getLatestBlogPosts, null)
-  console.log(postsNew)
 
   return (
     <div className="relative bg-white dark:bg-gray-900 px-4 sm:px-0 text-black dark:text-white pb-20">

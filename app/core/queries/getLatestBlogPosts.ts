@@ -6,7 +6,7 @@ const api = new GhostContentAPI({
   version: "v3",
 })
 
-export default async function getLatestBlogPosts() {
+export default async function getLatestBlogPosts(x) {
   const latestBlogPosts = await api.posts.browse({ limit: 3, include: "tags,authors" })
 
   return latestBlogPosts
