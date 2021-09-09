@@ -3,6 +3,9 @@ import { Image, Link, BlitzPage, useMutation, Routes } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
+import { Networking_06, Growth, Agriculture, Microphone } from "@carbon/pictograms-react"
+import { Microphone32 } from "@carbon/icons-react"
+
 import Project from "../core/components/Project"
 import Hero from "../core/components/hero"
 import HeroBackground from "../core/components/HeroBackground"
@@ -71,7 +74,8 @@ const Home: BlitzPage = () => {
           </Suspense>
           <Project
             title="Research modules"
-            description="Based on years of peer-reviewed research, our vision for improved science is where we publish research outputs step by step, instead of after-the-fact. This way, we track where findings come from and can "
+            description="While we help you, we nurture our vision for an improved science where we publish research outputs step by step, instead of after-the-fact. This way, we conveniently track where findings come from and expand the record to include things beyond narratives."
+            icon={<Networking_06 className="w-40 h-40 mx-auto" />}
           />
           <Testimonial
             quote="The vision for research modules left faculty and students in awe! The enthusiasm shows to this day - this is the way forward and everybody should hear about it."
@@ -80,21 +84,32 @@ const Home: BlitzPage = () => {
             org="University of Zurich"
             img="https://ucarecdn.com/b6620380-4af7-4dab-b237-c9db181cc0ca/-/preview/-/quality/smart/"
           />
+          <Hrule />
           <Project
-            title="Tailormade services and consultancy"
-            description="We want to help you make your science more open. Our experienced team can help you with tasks ranging from grant-writing, website building, to forensic statistics."
+            title="Workshops"
+            description="Open Science begins with sharing knowledge. We welcome invitations to share our experience on building open science, from introductions for beginners to advanced topics for experts."
+            icon={<Agriculture className="w-32 h-32 mx-auto" />}
+            button1="Book us"
+            url1="mailto:info@libscie.org?subject=Booking request"
           />
           <Project
-            title="Keynotes"
-            description="Open Science begins with shared knowledge. We welcome invitations to speak on the various facets of building open science, from introductions for beginners to advanced topics. Click below to find out where we are next month or to book us for an event."
+            title="Nurture your work"
+            description="We help you make science more open. We're ready to help you with tasks ranging from software engineering, website building, forensic statistics, and much more. We are versatile and used to new environments."
+            icon={<Growth className="w-32 h-32 mx-auto" />}
+            button1="Share your problem"
+            url1="mailto:info@libscie.org?subject=Booking request"
           />
+          {/* <Hrule /> */}
           <Project
             title="Podcast"
-            description="Your Open Science Digest. Visit us below for teh latest news from the web, social media, and newsfeeds."
+            description="Your Open Science Digest. Stay up-to-date and visit us below for the latest news from the web, social media, and newsfeeds."
+            icon={<Microphone className="w-32 h-32 mx-auto" />}
+            button1="Subscribe"
+            url1="https://anchor.fm/open-update"
           />
           <CtaContentWidth
-            call="TELL US YOUR CHALLENGE. WE LOVE COFFEE, SO DROP US A LINE!"
-            description="Not sure yet? Sign up to our newsletter"
+            call="Invite us to a chat and share your current challenges?"
+            description="We're happy to meet and see whether we can help point you in the right direction."
             link="https://savvycal.com/libscie-chartgerink/chat"
             button="Chat with us"
           />
