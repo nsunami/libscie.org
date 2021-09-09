@@ -1,58 +1,72 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react"
 import { Popover, Transition } from "@headlessui/react"
-import { ChartBarIcon, PhoneIcon, PlayIcon, SupportIcon } from "@heroicons/react/outline"
 import { Link, Routes } from "blitz"
 import { ChevronDown24, Menu32, Close24 } from "@carbon/icons-react"
+import { Certificate32, Events32, Microphone32, Pen32, Application32 } from "@carbon/icons-react"
+
 import LibscieLogo from "./Libscie-logo"
 
-const singleLinks = [
-  {
-    name: "Community",
-    href: "#",
-  },
-  {
-    name: "Infrastructure",
-    href: "#",
-  },
-  {
-    name: "Who we are",
-    href: "#",
-  },
-]
-const features = [
+const projects = [
   {
     name: "Hypergraph",
-    href: "#",
+    href: "https://hypergraph.xyz",
     description: "Publish research modules",
-    icon: ChartBarIcon,
+    icon: Application32,
   },
   {
     name: "Open Update",
-    href: "#",
-    description: "Weekly open science news podcast",
-    icon: ChartBarIcon,
+    href: "https://anchor.fm/open-update",
+    description: "Weekly open science podcast",
+    icon: Microphone32,
+  },
+  // {
+  //   name: "Consulting",
+  //   href: "#",
+  //   description: "We support your work with our expertise",
+  //   icon: ChartBarIcon,
+  // },
+]
+
+const whoWeAre = [
+  // {
+  //   name: "Authors",
+  //   href: "https://anchor.fm/open-update",
+  //   description: "The writers on our blog",
+  //   icon: Pen32,
+  // },
+  {
+    name: "Manifesto",
+    href: "/blog/liberate-science-manifesto",
+    description: "Our guiding document",
+    icon: Certificate32,
   },
   {
-    name: "Consulting",
-    href: "#",
-    description: "We support your work with our expertise",
-    icon: ChartBarIcon,
+    name: "Team",
+    href: "/team",
+    description: "Workers of liberate science",
+    icon: Events32,
   },
+  // {
+  //   name: "Consulting",
+  //   href: "#",
+  //   description: "We support your work with our expertise",
+  //   icon: ChartBarIcon,
+  // },
 ]
-const callsToAction = [
-  { name: "Watch Demo", href: "#", icon: PlayIcon },
-  { name: "Contact Sales", href: "#", icon: PhoneIcon },
-]
-const resources = [
-  {
-    name: "FAQs",
-    description: "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-    icon: SupportIcon,
-  },
-]
-const recentPosts = [{ id: 1, name: "Boost your conversion rate", href: "#" }]
+// const callsToAction = [
+//   { name: "Download app", href: "#", icon: Download32 },
+//   { name: "Listen podcast", href: "#", icon: MicrophoneFilled32 },
+// ]
+const callsToAction = null
+// const resources = [
+//   {
+//     name: "FAQs",
+//     description: "Get all of your questions answered in our forums or contact support.",
+//     href: "#",
+//     icon: SupportIcon,
+//   },
+// ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -108,11 +122,13 @@ export default function Navbar() {
                     </div>
                     <div className="mt-6">
                       <nav className="grid gap-y-8">
-                        {features.map((item) => (
+                        {projects.map((item) => (
                           <a
                             key={item.name}
                             href={item.href}
+                            target="_blank"
                             className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                            rel="noreferrer"
                           >
                             <item.icon
                               className="flex-shrink-0 h-6 w-6 text-indigo-600"
@@ -123,19 +139,27 @@ export default function Navbar() {
                             </span>
                           </a>
                         ))}
-                        {singleLinks.map((link) => (
+                        {whoWeAre.map((item) => (
                           <a
-                            key={link.name}
-                            href={link.href}
-                            className="text-base font-medium text-gray-900 dark:text-white"
+                            key={item.name}
+                            href={item.href}
+                            target="_blank"
+                            className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+                            rel="noreferrer"
                           >
-                            {link.name}
+                            <item.icon
+                              className="flex-shrink-0 h-6 w-6 text-indigo-600"
+                              aria-hidden="true"
+                            />
+                            <span className="ml-3 text-base font-medium text-gray-900 dark:text-white">
+                              {item.name}
+                            </span>
                           </a>
                         ))}
                       </nav>
                     </div>
                   </div>
-                  <div className="bg-indigo-600 py-5 px-5 rounded-b">
+                  {/* <div className="bg-indigo-600 py-5 px-5 rounded-b">
                     <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                       {resources.map((item) => (
                         <a
@@ -147,7 +171,7 @@ export default function Navbar() {
                         </a>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </Popover.Panel>
             </Transition>
@@ -190,7 +214,7 @@ export default function Navbar() {
                       <Popover.Panel className="absolute shadow-3xl rounded-b -ml-4 mt-3 transform z-10 px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-gray-50 dark:bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8">
-                            {features.map((item) => (
+                            {projects.map((item) => (
                               <a
                                 key={item.name}
                                 href={item.href}
@@ -209,35 +233,32 @@ export default function Navbar() {
                               </a>
                             ))}
                           </div>
-                          <div className="px-5 py-5  bg-indigo-600 text-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                            {callsToAction.map((item) => (
-                              <div key={item.name} className="flow-root">
-                                <a
-                                  href={item.href}
-                                  className="-m-3 p-3 flex items-center rounded-md text-base font-medium"
-                                >
-                                  <item.icon className="flex-shrink-0 h-6 w-6" aria-hidden="true" />
-                                  <span className="ml-3">{item.name}</span>
-                                </a>
-                              </div>
-                            ))}
-                          </div>
+                          {callsToAction ? (
+                            <div className="px-5 py-5  bg-indigo-600 text-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                              {callsToAction.map((item) => (
+                                <div key={item.name} className="flow-root">
+                                  <a
+                                    href={item.href}
+                                    className="-m-3 p-3 flex items-center rounded-md text-base font-medium"
+                                  >
+                                    <item.icon
+                                      className="flex-shrink-0 h-6 w-6"
+                                      aria-hidden="true"
+                                    />
+                                    <span className="ml-3">{item.name}</span>
+                                  </a>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            ""
+                          )}
                         </div>
                       </Popover.Panel>
                     </Transition>
                   </>
                 )}
               </Popover>
-              {singleLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-base font-medium text-gray-500 dark:text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
-                >
-                  {link.name}
-                </a>
-              ))}
-              {/* Popover 2 */}
               <Popover className="relative">
                 {({ open }) => (
                   <>
@@ -249,18 +270,18 @@ export default function Navbar() {
                         "group bg-gray-50 dark:bg-gray-900 rounded-md inline-flex items-center text-base font-medium hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none focus:ring-2  focus:ring-indigo-500"
                       )}
                     >
-                      <span>More</span>
+                      <span>Who we are</span>
                       <ChevronDown24
                         className={classNames(
                           open
                             ? "text-gray-700 dark:text-gray-300"
-                            : "text-gray-500 dark:text-gray-500",
+                            : "text-gray-600 dark:text-gray-500",
                           "ml-2 h-5 w-5 group-hover:text-gray-700 dark:group-hover:text-gray-300"
                         )}
                         aria-hidden="true"
                       />
                     </Popover.Button>
-
+                    {/* Popover panel 1 */}
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-200"
@@ -270,10 +291,10 @@ export default function Navbar() {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 translate-y-1"
                     >
-                      <Popover.Panel className="absolute shadow-3xl left-1/2 z-10 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
+                      <Popover.Panel className="absolute shadow-3xl rounded-b -ml-4 mt-3 transform z-10 px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                         <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                           <div className="relative grid gap-6 bg-gray-50 dark:bg-gray-900 px-5 py-6 sm:gap-8 sm:p-8">
-                            {resources.map((item) => (
+                            {whoWeAre.map((item) => (
                               <a
                                 key={item.name}
                                 href={item.href}
@@ -292,6 +313,26 @@ export default function Navbar() {
                               </a>
                             ))}
                           </div>
+                          {callsToAction ? (
+                            <div className="px-5 py-5  bg-indigo-600 text-white space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                              {callsToAction.map((item) => (
+                                <div key={item.name} className="flow-root">
+                                  <a
+                                    href={item.href}
+                                    className="-m-3 p-3 flex items-center rounded-md text-base font-medium"
+                                  >
+                                    <item.icon
+                                      className="flex-shrink-0 h-6 w-6"
+                                      aria-hidden="true"
+                                    />
+                                    <span className="ml-3">{item.name}</span>
+                                  </a>
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            ""
+                          )}
                         </div>
                       </Popover.Panel>
                     </Transition>
