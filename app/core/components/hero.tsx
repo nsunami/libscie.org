@@ -9,8 +9,7 @@ export default function Hero() {
       </h1>
       <p className="max-w-xl text-black dark:text-white mb-5 font-bold">
         Liberate Science supports your efforts to improve research, bringing a decade of open
-        science activism, research experience, and technological know-how to your projects. All
-        while we work towards our own grand vision.
+        science activism, research experience, and technological know-how to your projects.
       </p>
       <Link href="https://savvycal.com/libscie-chartgerink/free-consult">
         <a
