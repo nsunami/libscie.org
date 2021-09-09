@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@carbon/icons-react": "10.37.0",
+    "@carbon/pictograms-react": "11.15.0",
     "@headlessui/react": "1.4.1",
     "@heroicons/react": "1.0.4",
     "@prisma/client": "2.30.0",
