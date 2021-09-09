@@ -56,3 +56,49 @@
 .blog-post ul {
   list-style-type: circle;
 }
+
+/* Audio player CSS */
+.rhap_main {
+  /* display: flex; */
+  /* padding: 25%; */
+  width: 100%;
+  justify-content: center;
+}
+.rhap_additional-controls {
+  display: none;
+}
+.rhap_main-controls {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 15px;
+}
+.rhap_main-controls svg {
+  height: 100px;
+  width: auto;
+}
+@media (prefers-color-scheme: dark) {
+  .rhap_main-controls svg {
+    color: white;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .rhap_main-controls svg {
+    color: black;
+  }
+}
+.rhap_volume-controls {
+  display: none;
+}
+.rhap_time {
+  display: none;
+}
+.rhap_time.rhap_total-time {
+  display: none;
+}
+.rhap_progress-filled {
+  display: none;
+}
+.rhap_progress-bar {
+  display: none;
+}

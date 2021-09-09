@@ -1,10 +1,13 @@
-import { Suspense } from "react"
+import { Suspense, useState, useEffect } from "react"
 import { Image, Link, BlitzPage, useMutation, Routes } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
 import { Networking_06, Growth, Agriculture, Microphone } from "@carbon/pictograms-react"
 import { Microphone32 } from "@carbon/icons-react"
+import AudioPlayer from "react-h5-audio-player"
+import rssParser from "react-native-rss-parser"
+import { Play32, Pause32 } from "@carbon/icons-react"
 
 import Project from "../core/components/Project"
 import Hero from "../core/components/hero"
@@ -56,6 +59,17 @@ import BlogReel from "../core/components/Blog-reel"
 // }
 
 const Home: BlitzPage = () => {
+  const [latestPodcastUrl, setLatestPodcastUrl] = useState()
+
+  useEffect(() => {
+    fetch("https://anchor.fm/s/479af370/podcast/rss")
+      .then((response) => response.text())
+      .then((responseData) => rssParser.parse(responseData))
+      .then((rss) => {
+        setLatestPodcastUrl(rss.items[0].enclosures[0].url)
+      })
+  }, [])
+
   return (
     <div>
       <main className="bg-white dark:bg-gray-900 pb-20 pt-28">
@@ -102,16 +116,35 @@ const Home: BlitzPage = () => {
           {/* <Hrule /> */}
           <Project
             title="Podcast"
-            description="Your Open Science Digest. Stay up-to-date and visit us below for the latest news from the web, social media, and newsfeeds."
-            icon={<Microphone className="w-32 h-32 mx-auto" />}
+            description="Stay up-to-date with our weekly open science digest, collecting the latest from the web, social media, and newsfeeds. Press play on the left to hear the latest episode."
+            icon={
+              <AudioPlayer
+                autoPlay={false}
+                hasDefaultKeyBindings={false}
+                src={latestPodcastUrl}
+                autoPlayAfterSrcChange={false}
+                layout="stacked"
+                customIcons={{
+                  play: <Play32 />,
+                  pause: <Pause32 />,
+                }}
+                customAdditionalControls={[]}
+                customVolumeControls={[]}
+                showSkipControls={false}
+                showJumpControls={false}
+                showDownloadProgress={false}
+                showFilledVolume={false}
+                className="flex w-32 h-32 mx-auto align-middle focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 focus:rounded"
+              />
+            }
             button1="Subscribe"
             url1="https://anchor.fm/open-update"
-          />
+          ></Project>
           <CtaContentWidth
             call="Invite us to a chat and share your current challenges?"
             description="We're happy to meet and see whether we can help point you in the right direction."
-            link="https://savvycal.com/libscie-chartgerink/chat"
-            button="Chat with us"
+            link="https://savvycal.com/libscie-chartgerink/free-consult"
+            button="Book a free consult"
           />
         </div>
       </main>
