@@ -13,7 +13,10 @@ const CtaContentWidth = ({ call, description, link, button }) => {
       <h2 className="text-3xl font-normal m-4">{call}</h2>
       <p className="m-4 text-base">{description}</p>
       <Link href={link}>
-        <a className="m-4 border-2 border-indigo-600 hover:bg-indigo-600 hover:text-white pt-1 pr-4 pb-1 pl-4">
+        <a
+          className="m-4 border-2 border-indigo-600 hover:bg-indigo-600 hover:text-white pt-1 pr-4 pb-1 pl-4"
+          target="_blank"
+        >
           {button}
           <ArrowRight16 className="inline ml-2 mb-1 align-middle" />
         </a>

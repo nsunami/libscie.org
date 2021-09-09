@@ -13,7 +13,10 @@ export default function Hero() {
         projects. All while we work towards our own grand vision.
       </p>
       <Link href="https://savvycal.com/libscie-chartgerink/chat">
-        <a className="rounded bg-indigo-600 text-white text-xl p-2 hover:bg-indigo-500 shadow-3xl">
+        <a
+          className="rounded bg-indigo-600 text-white text-xl p-2 hover:bg-indigo-500 shadow-3xl"
+          target="_blank"
+        >
           Book a free consult
         </a>
       </Link>

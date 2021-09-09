@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, Routes } from "blitz"
-import { LogoTwitter32, LogoGithub32, LogoLinkedin32 } from "@carbon/icons-react"
+import { Email32, LogoTwitter32, LogoGithub32, LogoLinkedin32 } from "@carbon/icons-react"
 import newGithubIssueUrl from "new-github-issue-url"
 
 import Mozilla from "./Mozilla"
@@ -20,13 +20,17 @@ export default function Footer() {
           </p>
           <hr className="w-20 mt-4 mb-4 border-t-0 bg-gradient-to-r from-pink-400 to-indigo-600 bg-yellow-400 h-0.5 " />
           <p>
-            <Link href="#">
-              <a className="hover:bg-indigo-600 hover:text-white">Terms</a>
+            <Link href="https://www.notion.so/libscie/Terms-libscie-org-6f22bba7d3314ee2915ae4419e55317c">
+              <a className="hover:bg-indigo-600 hover:text-white" target="_blank">
+                Terms
+              </a>
             </Link>
           </p>
           <p>
-            <Link href="#">
-              <a className="hover:bg-indigo-600 hover:text-white">Data policy</a>
+            <Link href="https://www.notion.so/libscie/Terms-libscie-org-6f22bba7d3314ee2915ae4419e55317c#6021cfc8513f44b89aac6d57eea95d11">
+              <a className="hover:bg-indigo-600 hover:text-white" target="_blank">
+                Data policy
+              </a>
             </Link>
           </p>
           <p>
@@ -38,7 +42,9 @@ export default function Footer() {
                 body: "While browsing your website, I found the following issue:\n\n",
               })}
             >
-              <a className="hover:bg-indigo-600 hover:text-white">Report issue</a>
+              <a className="hover:bg-indigo-600 hover:text-white" target="_blank">
+                Report issue
+              </a>
             </Link>
           </p>
           <p>
@@ -51,14 +57,14 @@ export default function Footer() {
           <h3 className="mb-4 font-bold text-sm">Funders</h3>
           <p className="mt-4 mb-4">
             <Link href="https://shuttleworthfoundation.org">
-              <a>
+              <a target="_blank">
                 <Shuttleworth />
               </a>
             </Link>
           </p>
           <p className="mt-4">
             <Link href="https://foundation.mozilla.org/en/">
-              <a>
+              <a target="_blank">
                 <Mozilla />
               </a>
             </Link>
@@ -71,7 +77,7 @@ export default function Footer() {
           <h3 className="mb-4 font-bold text-sm">Follow</h3>
           <p>
             <Link href="https://github.com/libscie">
-              <a className="flex align-middle">
+              <a className="flex align-middle" target="_blank">
                 <LogoGithub32 className="max-h-4 w-auto m-1" />
                 <span className="hover:bg-indigo-600 text-black dark:text-white hover:text-white">
                   GitHub
@@ -81,7 +87,7 @@ export default function Footer() {
           </p>
           <p>
             <Link href="https://www.linkedin.com/company/libscie">
-              <a className="flex align-middle">
+              <a className="flex align-middle" target="_blank">
                 <LogoLinkedin32 className="max-h-4 w-auto m-1" />
                 <span className="hover:bg-indigo-600 text-black dark:text-white hover:text-white">
                   LinkedIn
@@ -89,10 +95,19 @@ export default function Footer() {
               </a>
             </Link>
           </p>
-
+          <p>
+            <Link href="https://forms.gle/ebzsSRN8erubCTW5A">
+              <a className="flex align-middle" target="_blank">
+                <Email32 className="max-h-4 w-auto m-1" />
+                <span className="hover:bg-indigo-600 text-black dark:text-white hover:text-white">
+                  Newsletter
+                </span>
+              </a>
+            </Link>
+          </p>
           <p>
             <Link href="https://twitter.com/libscie">
-              <a className="flex align-middle">
+              <a className="flex align-middle" target="_blank">
                 <LogoTwitter32 className="max-h-4 w-auto m-1" />
                 <span className="hover:bg-indigo-600 text-black dark:text-white hover:text-white">
                   Twitter
