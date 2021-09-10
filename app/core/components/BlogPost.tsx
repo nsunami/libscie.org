@@ -10,13 +10,13 @@ const BlogPost = (slug) => {
 
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-white w-screen mt-0">
-      <div className=" max-w-4xl mx-auto mt-0">
+      <div className="max-w-4xl mx-auto mt-0">
         <PageHeader
           page={"Blog - " + post.published_at.substring(0, 10)}
           title={post.title}
           description={post.custom_excerpt}
         />
-        <div className="flex">
+        <div className="sm:flex w-screen sm:max-w-2xl">
           {post.authors.map((author) => (
             <div key="author" className="flex mr-4 ml-4 md:ml-0 my-2">
               <img className="h-8 w-8 rounded-full" src={author.profile_image} />
