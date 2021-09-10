@@ -36,7 +36,9 @@ const Layout = ({ title, children }: LayoutProps) => {
           fontSize: "1rem",
         }}
         expires={150}
-        onAccept={() => {}}
+        onAccept={() => {
+          console.log("Cookies acknowledged")
+        }}
       >
         We use essential cookies to provide a secure webpage. See also our{" "}
         <Link href="https://www.notion.so/libscie/Terms-libscie-org-6f22bba7d3314ee2915ae4419e55317c#6021cfc8513f44b89aac6d57eea95d11">
