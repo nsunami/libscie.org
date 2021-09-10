@@ -35,6 +35,7 @@
     "blitz": "0.39.0",
     "formik": "2.2.9",
     "new-github-issue-url": "0.2.1",
+    "prisma": "2.30.0",
     "postcss": "8.3.6",
     "react": "18.0.0-alpha-95d762e40-20210908",
     "react-dom": "18.0.0-alpha-95d762e40-20210908",
@@ -53,7 +54,6 @@
     "prettier-plugin-prisma": "0.15.0",
     "pretty-quick": "3.1.1",
     "preview-email": "3.0.5",
-    "prisma": "2.30.0",
     "typescript": "~4.3"
   },
   "private": true
