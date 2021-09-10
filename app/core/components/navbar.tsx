@@ -5,8 +5,6 @@ import { Link, Routes } from "blitz"
 import { ChevronDown24, Menu32, Close24 } from "@carbon/icons-react"
 import { Certificate32, Events32, Microphone32, Pen32, Application32 } from "@carbon/icons-react"
 
-import LibscieLogo from "./Libscie-logo"
-
 const projects = [
   {
     name: "Hypergraph",
@@ -82,7 +80,11 @@ export default function Navbar() {
               <Link href={Routes.Home()}>
                 <a>
                   <span className="sr-only">Liberate Science</span>
-                  <LibscieLogo />
+                  <img
+                    src="https://ucarecdn.com/a1aa512a-9bfc-4f37-829c-ce2a5fa72e63/-/preview/-/quality/smart/"
+                    alt="Liberate Science logo"
+                    className="h-10 w-10 mx-auto"
+                  />
                 </a>
               </Link>
             </div>
@@ -111,7 +113,11 @@ export default function Navbar() {
                   <div className="pt-5 pb-6 px-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <LibscieLogo />
+                        <img
+                          src="https://ucarecdn.com/a1aa512a-9bfc-4f37-829c-ce2a5fa72e63/-/preview/-/quality/smart/"
+                          alt="Liberate Science logo"
+                          className="h-10 w-10 mx-auto"
+                        />
                       </div>
                       <div className="-mr-2">
                         <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center text-gray-500 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
