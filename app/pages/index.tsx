@@ -141,8 +141,8 @@ const Home: BlitzPage = () => {
             url1="https://anchor.fm/open-update"
           />
           <CtaContentWidth
-            call="Invite us to a chat and share your current challenges?"
-            description="We're happy to meet and see whether we can help point you in the right direction."
+            call="Share your current challenges in a chat with us"
+            description="We're happy to meet and see whether we can help you, or at least point you in the right direction."
             link="https://savvycal.com/libscie-chartgerink/free-consult"
             button="Book a free consult"
           />
