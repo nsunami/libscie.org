@@ -1,5 +1,5 @@
 import { Suspense, useState, useEffect } from "react"
-import { Image, Link, BlitzPage, useMutation, Routes } from "blitz"
+import { InferGetStaticPropsType } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
@@ -8,6 +8,7 @@ import { Microphone32 } from "@carbon/icons-react"
 import AudioPlayer from "react-h5-audio-player"
 import rssParser from "react-native-rss-parser"
 import { Play32, Pause32 } from "@carbon/icons-react"
+import GhostContentAPI from "@tryghost/content-api"
 
 import Project from "../core/components/Project"
 import Hero from "../core/components/hero"
@@ -56,7 +57,23 @@ import BlogReel from "../core/components/Blog-reel"
 //   }
 // }
 
-const Home: BlitzPage = () => {
+const api = new GhostContentAPI({
+  url: process.env.BLOG_URL,
+  key: process.env.BLOG_KEY,
+  version: "v3",
+})
+
+export async function getStaticProps() {
+  const latestBlogPosts = await api.posts.browse({ limit: 3, include: "tags,authors" })
+
+  return {
+    props: {
+      posts: latestBlogPosts,
+    }, // will be passed to the page component as props
+  }
+}
+
+const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [latestPodcastUrl, setLatestPodcastUrl] = useState()
 
   useEffect(() => {
@@ -82,7 +99,7 @@ const Home: BlitzPage = () => {
         {/* <Waves /> */}
         <div className="max-w-4xl mx-auto mt-28">
           <Suspense fallback="Loading">
-            <BlogReel />
+            <BlogReel posts={posts} />
           </Suspense>
           <Project
             title="Research modules"
