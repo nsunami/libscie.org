@@ -2,9 +2,7 @@ import React from "react"
 import { useQuery, Routes } from "@blitzjs/core"
 import getLatestBlogPosts from "../queries/getLatestBlogPosts"
 
-const BlogReel = () => {
-  const [postsNew] = useQuery(getLatestBlogPosts, null)
-
+const BlogReel = ({ posts }) => {
   return (
     <div className="relative bg-white dark:bg-gray-900 px-4 sm:px-0 text-black dark:text-white pb-20">
       <div className="relative max-w-7xl mx-auto">
@@ -14,7 +12,7 @@ const BlogReel = () => {
           </h2>
         </div>
         <div className="mt-4 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {postsNew.map((post) => (
+          {posts.map((post) => (
             <div key={post.title} className="flex flex-col rounded-lg shadow-3xl overflow-hidden">
               <div className="flex-1 bg-white dark:bg-gray-800 p-6 flex flex-col justify-between hover:bg-indigo-100 dark:hover:bg-indigo-900">
                 <div className="flex-1">
