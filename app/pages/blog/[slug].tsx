@@ -1,4 +1,4 @@
-import { BlitzPage, useParam } from "blitz"
+import { BlitzPage, InferGetStaticPropsType } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { Suspense } from "react"
 import GhostContentAPI from "@tryghost/content-api"
@@ -33,7 +33,7 @@ export async function getStaticProps(context) {
   }
 }
 
-const BlogPostPage: BlitzPage = ({ post }) => {
+const BlogPostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title={post.title}>
       <div className="flex justify-center items-center">

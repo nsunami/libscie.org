@@ -1,5 +1,5 @@
 import { Suspense, useState, useEffect } from "react"
-import { Image, Link, BlitzPage, useMutation, Routes } from "blitz"
+import { InferGetStaticPropsType } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
@@ -73,7 +73,7 @@ export async function getStaticProps() {
   }
 }
 
-const Home: BlitzPage = ({ posts }) => {
+const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [latestPodcastUrl, setLatestPodcastUrl] = useState()
 
   useEffect(() => {
