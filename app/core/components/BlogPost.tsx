@@ -1,13 +1,8 @@
 import React from "react"
-import { useQuery, Link } from "blitz"
 
-import getBlogPost from "../queries/getBlogPost"
 import PageHeader from "./Page-header"
 
-const BlogPost = (slug) => {
-  const [post] = useQuery(getBlogPost, { slug })
-  console.log(post)
-
+const BlogPost = ({ post }) => {
   return (
     <div className="bg-white dark:bg-gray-900 text-black dark:text-white w-screen mt-0">
       <div className="max-w-4xl mx-auto mt-0">
