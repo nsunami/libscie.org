@@ -39,7 +39,6 @@ const Imprint: BlitzPage = () => {
         <h2 className="font-bold text-xl mt-4">Registration</h2>
         <p>Amtsgericht Charlottenburg (Berlin)</p>
         <p>HRB 211 450</p>
-        <p>UST. id DE3741950167</p>
         <p>VAT ID DE326772207</p>
         <p>EORI DE804962659955787</p>
       </div>
