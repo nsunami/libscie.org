@@ -158,7 +158,7 @@ const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
             url1="https://anchor.fm/open-update"
           />
           <CtaContentWidth
-            call="Share your current challenges in a chat with us"
+            call="Share your current ideas and challenges in a chat with us"
             description="We're happy to meet and see whether we can help you, or at least point you in the right direction."
             link="https://savvycal.com/libscie-chartgerink/free-consult"
             button="Book a free consult"
