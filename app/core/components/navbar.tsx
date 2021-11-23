@@ -7,8 +7,8 @@ import { Certificate32, Events32, Microphone32, Pen32, Application32 } from "@ca
 
 const projects = [
   {
-    name: "Hypergraph",
-    href: "https://hypergraph.xyz",
+    name: "ResearchEquals",
+    href: "https://researchequals.com/",
     description: "Publish research modules",
     icon: Application32,
   },
